@@ -1,11 +1,14 @@
  @use "../../abstracts/mixins";
 .agenda{
-    width: 45rem;
+    width: 30rem;
     aspect-ratio: 1/1;
     background: #232121;
     border-radius: 2rem;
     color: white;
     align-items: center;
+    position: fixed;
+    right: 4rem;
+    bottom: 3.4rem;
 
     &__header{
         background: #000000;
@@ -22,23 +25,24 @@
     &__button{
         background: none;
         border: none;
-        font-size: 200%;
+        font-size: 150%;
         color: white;
 
         &:hover{
             cursor: pointer;
             color: gray;
+            transform: scale(1.1);
             transition: 0.4s;
         }
     }
 
     &__month{
         height: 80%;
-        
         padding: 2rem;
         display: grid;
         list-style: none;
         grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(5,1fr);
         gap: 1rem;
        
     }
@@ -46,15 +50,18 @@
     &__day{
         background: darken(#eee, 20%);
         @include mixins.flexCenter;
-        width: 85%;
+        width: 80%;
         aspect-ratio: 1/1;
         border-radius: 50%;
+        font-size: 70%;
 
         &:hover{
             cursor: pointer;
-            color: gray;
+            color: rgb(0, 0, 0);
             transition: 0.4s;
+            transform: scale(1.1);
         }
      
     }
 }
+

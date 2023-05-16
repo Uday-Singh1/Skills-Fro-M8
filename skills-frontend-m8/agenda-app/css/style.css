@@ -10,12 +10,15 @@ body {
 }
 
 .agenda {
-  width: 45rem;
+  width: 30rem;
   aspect-ratio: 1/1;
   background: #232121;
   border-radius: 2rem;
   color: white;
   align-items: center;
+  position: fixed;
+  right: 4rem;
+  bottom: 3.4rem;
 }
 .agenda__header {
   background: #000000;
@@ -31,12 +34,13 @@ body {
 .agenda__button {
   background: none;
   border: none;
-  font-size: 200%;
+  font-size: 150%;
   color: white;
 }
 .agenda__button:hover {
   cursor: pointer;
   color: gray;
+  transform: scale(1.1);
   transition: 0.4s;
 }
 .agenda__month {
@@ -45,6 +49,7 @@ body {
   display: grid;
   list-style: none;
   grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 1rem;
 }
 .agenda__day {
@@ -52,14 +57,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 80%;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  font-size: 70%;
 }
 .agenda__day:hover {
   cursor: pointer;
-  color: gray;
+  color: rgb(0, 0, 0);
   transition: 0.4s;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 62.5rem) {
+  .agenda {
+    position: static;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
